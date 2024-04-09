@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday</title>
+    <style>
+        body {
+            /* font-family: Arial, sans-serif; */
+            margin: 0;
+            padding: 0;
+            font-family: latha;
+            color: white;
+            background: url(bgimg.jpg) no-repeat;
+            background-repeat: no-repeat;
+            /* Prevents background image from repeating */
+            background-size: cover;
+        }
+
+
+        .box {
+            width: 900px;
+            float: right;
+            border: 1px solid none;
+        }
+
+        .box ul {
+            list-style-type: none;
+            /* Hides bullet points for list items */
+        }
+
+        .box ul li {
+            width: 120px;
+            float: left;
+            margin: 10px auto;
+            text-align: center;
+
+        }
+
+        .box ul li a {
+            text-decoration: none;
+            color: darkgray;
+        }
+
+        .box ul li:hover {
+            background-color: brown;
+        }
+
+        .box ul li a:hover {
+            color: white;
+        }
+
+
+        .header {
+            background-color: black;
+            color: pink;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .column h2 {
+            text-align: center;
+            color: black;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box">
+        <ul type="" none>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Menu</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">Feedback</a>
+            </li>
+        </ul>
+    </div><br><br><br><br> -->
+
+    <div class="header">
+        <h1>SUNDAY</h1>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <h2>BREAKFAST</h2>
+            <div class="image-container">
+
+                <img src="poha.jpg" alt="Poha">
+                <img src="milk.jpeg" alt="Milk">
+                <img src="tea.jpg" alt="Tea">
+                <img src="bbj.jpeg" alt="Bread, Butter and Jam">
+                <img src="seasonal.jpg" alt="Seasonal Fruit">
+
+            </div>
+        </div>
+        <div class="column">
+            <h2>LUNCH</h2>
+            <div class="image-container">
+
+                <img src="puri.jpg" alt="Puri">
+                <img src="chhole.jpg" alt="Chhole">
+                <img src="rice.jpg" alt="Rice">
+                <img src="dal.jpg" alt="Dal">
+                <img src="salad.jpg" alt="Salad">
+                <img src="raita.jpg" alt="Boondi Raita">
+
+            </div>
+        </div>
+        <div class="column">
+            <h2>SNACKS</h2>
+            <div class="image-container">
+
+                <img src="oreo.jpg" alt="Oreo">
+                <img src="tea.jpg" alt="Tea">
+            </div>
+        </div>
+        <div class="column">
+            <h2>DINNER</h2>
+            <div class="image-container">
+
+                <img src="paneer.jpg" alt="Paneer Masala">
+                <img src="chapati.jpg" alt="Chapati">
+                <img src="jeera_rice.jpg" alt="Jeera Rice">
+                <img src="dal_fry.jpg" alt="Dal Fry">
+                <img src="salad.jpg" alt="Salad">
+                <img src="rasgulla.jpg" alt="Rasgulla/Ras-Malai">
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

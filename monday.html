@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monday</title>
+    <link rel="stylesheet" href="days.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            background: url(bgimg.jpg) no-repeat;
+            /* Set a light background color */
+            background-repeat: no-repeat;
+            /* Prevents background image from repeating */
+            background-size: cover;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        .header {
+            background-color: black;
+            color: pink;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            /* align-items: stretch; */
+            /* Align columns evenly */
+            flex-wrap: wrap;
+            /* Allow columns to wrap to the next line on smaller screens */
+            margin: 0 auto;
+            max-width: 1200px;
+            /* Set a maximum width for the container */
+        }
+
+        .column {
+            flex: 1;
+            flex-basis: calc(25% - 40px);
+            /* Set column width to 25% minus padding */
+            padding: 10px;
+            padding-left: 10px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Add a subtle box shadow */
+            margin-bottom: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .column h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: x-large;
+            color: #666
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-container img {
+            width: 100px;
+            /* Set a fixed width for the circular images */
+            height: 100px;
+            /* Set a fixed height for the circular images */
+            border-radius: 50%;
+            margin: 10px auto;
+            transition: transform 0.3s ease;
+            /* Add a smooth transition effect */
+            display: block;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.4);
+            /* Scale up the image on hover */
+        }
+
+        .image-container p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        .column p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Monday</h1>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <h2>BREAKFAST</h2>
+            <p>7:30AM - 9:30AM</p>
+            <div class="image-container">
+                <img src="idli.jpg" alt="Idli">
+                <p>Idli</p>
+                <img src="milk.jpeg" alt="Milk">
+                <p>Milk</p>
+                <img src="tea.jpg" alt="Tea">
+                <p>Tea</p>
+                <img src="bbj.jpeg" alt="Bread, Butter and Jam">
+                <p>Bread, Butter and Jam</p>
+                <img src="banana.jpg" alt="Seasonal Fruit">
+                <p>Seasonal Fruit</p>
+            </div>
+        </div>
+        <div class="column">
+            <h2>LUNCH</h2>
+            <p>12:00PM - 2:00PM</p>
+            <div class="image-container">
+                <img src="chapati.jpg" alt="Chapati">
+                <p>Chapati</p>
+                <img src="usal.jpeg" alt="Usal">
+                <p>Usal</p>
+                <img src="rice.jpg" alt="Rice">
+                <p>Rice</p>
+                <img src="dal_takda.jpg" alt="Dal Tadka">
+                <p>Dal Tadka</p>
+                <img src="salad.jpg" alt="Salad">
+                <p>Salad</p>
+                <img src="buttermilk.jpg" alt="Chhanchh">
+                <p>Chhanchh</p>
+            </div>
+        </div>
+        <div class="column">
+            <h2>SNACKS</h2>
+            <p>5:30PM - 6:30PM</p>
+            <div class="image-container">
+                <img src="corn.jpg" alt="Corn Masala">
+                <p>Corn Masala</p>
+                <img src="tea.jpg" alt="Tea">
+                <p>Tea</p>
+            </div>
+        </div>
+        <div class="column">
+            <h2>DINNER</h2>
+            <p>7:30PM - 9:30PM</p>
+            <div class="image-container">
+                <img src="aalu.jpg" alt="Aloo Jeera">
+                <p>Aloo Jeera</p>
+                <img src="chapati.jpg" alt="Chapati">
+                <p>Chapati</p>
+                <img src="jeera_rice.jpg" alt="Jeera Rice">
+                <p>Jeera Rice</p>
+                <img src="dal_makhani.jpg" alt="Dal Makhani">
+                <p>Dal Makhani</p>
+                <img src="salad.jpg" alt="Salad">
+                <p>Salad</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
