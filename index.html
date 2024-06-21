@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* css styling */
         body {
@@ -61,12 +61,15 @@
             display: flex;
             justify-content: space-between;
             align-items: end;
-            padding: 10px;
+            padding: 0px;
+            margin-right: 10px;
+            position: relative;
+            z-index: 2;
         }
 
         .box ul {
             list-style-type: none;
-
+            padding: 10px;
             /* Hides bullet points for list items */
         }
 
@@ -74,23 +77,55 @@
             width: 120px;
             float: right;
             margin: 10px auto;
-            text-align: left;
+            text-align: center;
+            margin-right: 35px;
+            position: relative;
         }
 
         .box ul li a {
             text-decoration: none;
             color: darkgray;
-
+            font-size: 17px;
         }
 
         .box ul li:hover {
-            background-color: brown;
+            background-color: rgb(82, 78, 78);
+            border-radius: 5%;
         }
 
-        .box ul li a:hover {
+        .box ul li.active {
+            /* background-color: rgb(82, 78, 78); */
+            border-radius: 5%;
+            border-bottom: white solid;
+        }
+
+        .box ul li a:hover,
+        .box ul li.active a {
             color: white;
         }
 
+        .box ul li a:hover .arrow,
+        .box ul li.active .arrow {
+            border-color: white;
+        }
+
+        .arrow {
+            border: solid darkgray;
+            border-width: 0 3px 3px 0;
+            display: inline-table;
+            padding: 4px;
+            margin-left: 3px;
+            margin-bottom: 2px;
+        }
+
+        /* .arrow:hover {
+            border-color: white;
+        } */
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
 
         .menu-column {
             flex-grow: 5;
@@ -255,6 +290,7 @@
             display: flex;
             justify-content: space-between;
             /* Align items to left and right */
+            z-index: 1;
         }
 
         .wd {
@@ -272,6 +308,26 @@
             /* Adjust width to fit remaining space */
             padding-bottom: 0px;
 
+        }
+
+        .carousel-caption-bg {
+            background-color: rgba(0, 0, 0, 0.5);
+
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        .carousel-caption-bg:hover {
+            background-color: rgba(0, 0, 0, 0.225);
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        .carousel-control-bg {
+            background-color: rgba(0, 0, 0, 1);
+            /* Semi-transparent black background */
+            border-radius: 50px;
+            padding: 27px;
         }
 
 
@@ -303,6 +359,85 @@
             text-decoration: none;
             /* Remove default underline for links */
         }
+
+        .dropdown {
+            display: none;
+        }
+
+        .box ul li:hover .dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: rgba(0, 0, 0, 0.701);
+            color: white;
+            font-weight: bolder;
+            width: 200px;
+            height: auto;
+        }
+
+        .dropdown ul {
+            color: white;
+        }
+
+        .box ul li:hover .dropdown ul {
+            display: block;
+            margin: 10px;
+            color: white;
+            /* text-align: center; */
+            list-style-type: none;
+        }
+
+        .box ul li:hover .dropdown ul li {
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .dropdown ul li+li {
+            border-top: 1px solid rgba(255, 255, 255, 0.148);
+        }
+
+
+        .dropdown2 {
+            display: none;
+        }
+
+        .box ul li:hover .dropdown2 {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: rgba(0, 0, 0, 0.701);
+            color: white;
+            font-weight: bolder;
+            width: 200px;
+            height: auto;
+        }
+
+        .dropdown2 ul {
+            color: white;
+        }
+
+        .box ul li:hover .dropdown2 ul {
+            display: block;
+            margin: 10px;
+            color: white;
+            /* text-align: center; */
+            list-style-type: none;
+        }
+
+        .box ul li:hover .dropdown2 ul li {
+            width: auto;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .dropdown2 ul li+li {
+            border-top: 1px solid rgba(255, 255, 255, 0.148);
+        }
     </style>
 
 </head>
@@ -313,19 +448,50 @@
         <div class="links">
             <ul type="" none>
                 <li>
-                    <a href="">Feedback</a>
+                    <a href="https://forms.gle/hP8Z66pvkksGS7KM6">Feedback <span class="arrow down"></span></a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="">Contact <i class="arrow down"></i></a>
+                    <div class="dropdown2">
+                        <ul>
+                            <li> <a href="mailto:bahraniyashita@gmail.com"><span>&#9993;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Email</a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/yashita-bahrani-81472929a"><i
+                                        class="fa fa-linkedin-square"></i>&nbsp;&nbsp;&nbsp; LinkedIn</a>
+                            </li>
+
+                        </ul>
+                    </div>
                 </li>
                 <li>
-                    <a href="#menu">Highlight</a>
+                    <a href="#menu">Highlights <i class="arrow down"></i></a>
                 </li>
                 <li>
-                    <a href="">Menu</a>
+                    <a href="">Menu <i class="arrow down"></i></a>
+                    <div class="dropdown">
+                        <ul>
+                            <li> <a href="sunday.html">Sunday</a>
+                            </li>
+                            <li><a href="monday.html">Monday</a>
+                            </li>
+                            <li> <a href="tuesday.html">Tuesday</a>
+                            </li>
+                            <li><a href="wednesday.html">Wednesday</a>
+                            </li>
+                            <li> <a href="thursday.html">Thursday</a>
+                            </li>
+                            <li> <a href="friday.html">Friday</a>
+                            </li>
+                            <li><a href="saturday.html">Saturday</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
                 </li>
-                <li>
-                    <a href="">Home</a>
+                <li class="active">
+                    <a href="">Home <i class="arrow down"> </i></a>
                 </li>
             </ul>
         </div>
@@ -365,7 +531,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="food_new.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block carousel-caption-bg">
                         <h1>MealMap</h1>
                         <h2>Checkout the day-wise Mess Menu of IIIT Nagpur!</h2>
 
@@ -373,14 +539,14 @@
                 </div>
                 <div class="carousel-item">
                     <img src="pasta4.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block carousel-caption-bg">
                         <h1>MealMap</h1>
                         <h2>Checkout the day-wise Mess Menu of IIIT Nagpur!</h2>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="caraousel_new_2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block carousel-caption-bg">
                         <h1>MealMap</h1>
                         <h2>Checkout the day-wise Mess Menu of IIIT Nagpur!</h2>
                     </div>
@@ -388,12 +554,12 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon carousel-control-bg" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon carousel-control-bg" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
