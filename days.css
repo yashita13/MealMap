@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: black;
-    background: url(bgimg.jpg) no-repeat;
+    background: url(bgimg3_2.jpg) no-repeat;
     /* Set a light background color */
     background-repeat: no-repeat;
     /* Prevents background image from repeating */
@@ -17,10 +17,14 @@ h1 {
 
 .header {
     background-color: black;
-    color: pink;
+    /* color: pink; */
+    color: rgba(218, 101, 17, 0.918);
+    /* color: rgba(255, 255, 255, 0.792); */
+    /* color: rgba(6, 173, 250, 0.929); */
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
+    font-family: cursive;
 }
 
 .container {
@@ -41,7 +45,8 @@ h1 {
     /* Set column width to 25% minus padding */
     padding: 10px;
     padding-left: 10px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: rgba(255, 255, 255, 0.792);
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Add a subtle box shadow */
@@ -54,8 +59,11 @@ h1 {
     text-align: center;
     margin-bottom: 15px;
     font-weight: bold;
-    font-size: x-large;
-    color: #666
+    font-size: 25px;
+    /* color: #666 */
+    color: rgba(0, 0, 0, 0.771);
+    font-family: sans-serif;
+
 }
 
 .image-container {
@@ -84,7 +92,8 @@ h1 {
 .image-container p {
     margin-top: 5px;
     font-size: 14px;
-    color: #666;
+    /* color: #666; */
+    color: rgba(0, 0, 0, 0.633);
     width: 100%;
     text-align: center;
     font-weight: bold;
@@ -93,10 +102,11 @@ h1 {
 
 .column p {
     margin-top: 5px;
-    font-size: 14px;
-    color: #666;
+    font-size: 15px;
+    /* color: #666; */
+    color: rgba(0, 0, 0, 0.633);
     width: 100%;
     text-align: center;
     font-weight: bold;
-    font-size: medium;
+    font-size: large;
 }
